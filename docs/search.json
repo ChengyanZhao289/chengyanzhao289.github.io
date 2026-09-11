@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "I grow up in China and immigrated to Canada when I was 15.Then I finished my high school in Ottawa and undergrad in University of Toronto. Now I’m here at UBC! For my undergrad, I majored on Statistics and minored in Mathematics and East Asian Studies. During my undergraduate studies, I worked on projects involving statistical modelling, data analysis, and visualization using R."
+    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nChengyan Zhao\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -12,6 +12,27 @@
     "title": "Chengyan Zhao",
     "section": "",
     "text": "My name is Yan. I’m from China and I immigrate to Canada when I was 15. I finished my bachelor of statistics and math at UofT right before I came to MDS. I’m hoping to gain more knowledge to strength my coding skills and to know more people that have the same interest in data science!"
+  },
+  {
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "Orientation day on campus.\n\n\n\nMy First Weeks in MDS\nMy first week in the MDS program have been exciting and busy. Orientation was a great opportunity to meet my classmates and learn more about the program. There was a lot of new information to take in, but I was excited to start this new chapter and get to know the people I will be studying with over the next year.\nThe first week of classes was definitely more intense than I expected. We started working with Python, R, Git, GitHub, and the command line very quickly. Coming from a Statistics background at the University of Toronto, I was familiar with R and statistical concepts, but some of the programming tools and workflows were new to me. I was especially surprised by how quickly we moved from learning concepts to actually using them in worksheets and labs.\nNow that I have made it through the first two weeks, almost? I am starting to feel more comfortable with the pace and the tools we use. There is still a lot to learn, and sometimes it can feel overwhelming, but I am enjoying the challenge. I am looking forward to improving my programming skills, learning more about data science, and seeing how much I will grow throughout the MDS program."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I grow up in China and immigrated to Canada when I was 15.Then I finished my high school in Ottawa and undergrad in University of Toronto. Now I’m here at UBC! For my undergrad, I majored on Statistics and minored in Mathematics and East Asian Studies. During my undergraduate studies, I worked on projects involving statistical modelling, data analysis, and visualization using R."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "I grow up in China and immigrated to Canada when I was 15.Then I finished my high school in Ottawa and undergrad in University of Toronto. Now I’m here at UBC! For my undergrad, I majored on Statistics and minored in Mathematics and East Asian Studies. During my undergraduate studies, I worked on projects involving statistical modelling, data analysis, and visualization using R."
   },
   {
     "objectID": "about.html#why-data-science",
@@ -26,12 +47,5 @@
     "title": "About",
     "section": "Outside of data science",
     "text": "Outside of data science\nOutside of data science, I enjoy watching movies. In my free time, I like go for a walk and explore the city. I’m also a big fan of music. On weekends, you can usually find me shopping or hang out with friends. One thing I’d love to try or learn in the future is free diving."
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About",
-    "section": "",
-    "text": "I grow up in China and immigrated to Canada when I was 15.Then I finished my high school in Ottawa and undergrad in University of Toronto. Now I’m here at UBC! For my undergrad, I majored on Statistics and minored in Mathematics and East Asian Studies. During my undergraduate studies, I worked on projects involving statistical modelling, data analysis, and visualization using R."
   }
 ]
