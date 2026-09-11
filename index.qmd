@@ -1,7 +1,7 @@
 ---
-title: "website"
+title: "Chengyan Zhao"
 ---
 
-This is a Quarto website.
+![](images/profile.jpg){width=250px}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+My name is Yan. I'm from China and I immigrate to Canada when I was 15. I finished my bachelor of statistics and math at UofT right before I came to MDS. I'm hoping to gain more knowledge to strength my coding skills and to know more people that have the same interest in data science!

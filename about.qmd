@@ -2,4 +2,11 @@
 title: "About"
 ---
 
-About this site
+## Background
+I grow up in China and immigrated to Canada when I was 15.Then I finished my high school in Ottawa and undergrad in University of Toronto. Now I'm here at UBC! For my undergrad, I majored on Statistics and minored in Mathematics and East Asian Studies. During my undergraduate studies, I worked on projects involving statistical modelling, data analysis, and visualization using R.
+
+## Why data science
+Knowledge from statistics inspired me want to study further in data. I enjoyed using statistical methods to understand real-world problems, but I'm looking forward to develop stronger programming skills. This led me to Master of Data Science in UBC. 
+
+## Outside of data science
+Outside of data science, I enjoy watching movies. In my free time, I like go for a walk and explore the city. I’m also a big fan of music. On weekends, you can usually find me shopping or hang out with friends. One thing I’d love to try or learn in the future is free diving.

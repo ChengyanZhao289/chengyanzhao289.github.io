@@ -4,13 +4,34 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "I grow up in China and immigrated to Canada when I was 15.Then I finished my high school in Ottawa and undergrad in University of Toronto. Now I’m here at UBC! For my undergrad, I majored on Statistics and minored in Mathematics and East Asian Studies. During my undergraduate studies, I worked on projects involving statistical modelling, data analysis, and visualization using R."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "website",
+    "title": "Chengyan Zhao",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "My name is Yan. I’m from China and I immigrate to Canada when I was 15. I finished my bachelor of statistics and math at UofT right before I came to MDS. I’m hoping to gain more knowledge to strength my coding skills and to know more people that have the same interest in data science!"
+  },
+  {
+    "objectID": "about.html#why-data-science",
+    "href": "about.html#why-data-science",
+    "title": "About",
+    "section": "Why data science",
+    "text": "Why data science\nKnowledge from statistics inspired me want to study further in data. I enjoyed using statistical methods to understand real-world problems, but I’m looking forward to develop stronger programming skills. This led me to Master of Data Science in UBC."
+  },
+  {
+    "objectID": "about.html#outside-of-data-science",
+    "href": "about.html#outside-of-data-science",
+    "title": "About",
+    "section": "Outside of data science",
+    "text": "Outside of data science\nOutside of data science, I enjoy watching movies. In my free time, I like go for a walk and explore the city. I’m also a big fan of music. On weekends, you can usually find me shopping or hang out with friends. One thing I’d love to try or learn in the future is free diving."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "I grow up in China and immigrated to Canada when I was 15.Then I finished my high school in Ottawa and undergrad in University of Toronto. Now I’m here at UBC! For my undergrad, I majored on Statistics and minored in Mathematics and East Asian Studies. During my undergraduate studies, I worked on projects involving statistical modelling, data analysis, and visualization using R."
   }
 ]
