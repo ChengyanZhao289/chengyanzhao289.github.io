@@ -1,4 +1,3 @@
-# chengyanzhao289.github.io
 # Chengyan Zhao's website
 
 This repository contains my Quarto website, including computational posts
