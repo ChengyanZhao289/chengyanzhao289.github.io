@@ -2,7 +2,8 @@
 # Chengyan Zhao's website
 
 This repository contains my Quarto website, including computational posts
-analyzing Palmer Penguins data in R and Python.
+analyzing Palmer Penguins data in R and Python. 
+The topic is: How does body mass vary among the three penguin species in the Palmer Penguins dataset?
 
 ## Requirements
 
