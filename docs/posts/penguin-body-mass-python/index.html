@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>How does body mass vary among the three penguin species in the Palmer Penguins dataset? I will repeat the R analysis in Python: check missing values, calculate species means, and make a plot.</p>
 <p>Data: <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a>, collected by Dr.&nbsp;Kristen Gorman and the Palmer Station Antarctica LTER Program. Licence: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
-<div id="f07dae5d" class="cell" data-execution_count="1">
+<div id="0d81ef62" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -209,7 +209,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>The dataset contains three species. I check for missing body mass values before calculating the averages.</p>
-<div id="8785248b" class="cell" data-execution_count="2">
+<div id="9240ed17" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total rows:"</span>, <span class="bu">len</span>(penguins))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Missing body masses:"</span>, penguins[<span class="st">"body_mass_g"</span>].isna().<span class="bu">sum</span>())</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
