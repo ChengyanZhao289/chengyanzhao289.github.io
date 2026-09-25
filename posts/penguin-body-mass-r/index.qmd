@@ -1,0 +1,59 @@
+---
+title: "Penguin Body Mass by Species: R"
+author: "Chengyan Zhao"
+date: "2026-09-24"
+---
+# Topic:
+How does body mass vary among the three penguin species in the Palmer Penguins dataset? I will check missing values, calculate a summary for each species, and plot the measurements.
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/),
+collected by Dr. Kristen Gorman and the Palmer Station Antarctica LTER Program.
+Licence: [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+```{r}
+#| message: false
+#| warning: false
+library(palmerpenguins)
+library(dplyr)
+library(ggplot2)
+
+penguins |> count(species)
+```
+
+The dataset contains three species. And beofre comparing body mass, I will check how many measurements are missing.
+
+```{r}
+penguins |>
+  summarise(
+    total_rows = n(),
+    missing_body_mass = sum(is.na(body_mass_g))
+  )
+
+mass_summary <- penguins |>
+  filter(!is.na(body_mass_g)) |>
+  group_by(species) |>
+  summarise(
+    penguins = n(),
+    mean_mass_g = round(mean(body_mass_g), 1),
+    .groups = "drop"
+  )
+
+mass_summary
+```
+
+The table compares the number of recorded body masses and their mean for each species. I excluded missing body mass values from the calculation.
+
+```{r}
+#| label: fig-penguin-mass-r
+#| fig-cap: "Body mass measurements by penguin species."
+ggplot(
+  penguins |> filter(!is.na(body_mass_g)),
+  aes(x = species, y = body_mass_g, fill = species)
+) +
+  geom_boxplot() +
+  labs(x = "Species", y = "Body mass (g)") +
+  theme_minimal() +
+  guides(fill = "none")
+```
+
+The plot shows both the differences between species and the variation within each species. The summary table identifies which species has the highest mean; the boxplots show that individual penguins also vary in mass.

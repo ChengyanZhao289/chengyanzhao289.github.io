@@ -1,0 +1,55 @@
+---
+title: "Penguin Body Mass by Species: Python"
+author: "Chengyan Zhao"
+date: "2026-09-24"
+---
+
+How does body mass vary among the three penguin species in the Palmer Penguins dataset? I will repeat the R analysis in Python: check missing values, calculate species means, and make a plot.
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/),
+collected by Dr. Kristen Gorman and the Palmer Station Antarctica LTER Program.
+Licence: [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+```{python}
+#| warning: false
+from palmerpenguins import load_penguins
+import matplotlib.pyplot as plt
+
+penguins = load_penguins()
+print(penguins["species"].value_counts())
+```
+
+The dataset contains three species. I check for missing body mass values before calculating the averages.
+
+```{python}
+print("Total rows:", len(penguins))
+print("Missing body masses:", penguins["body_mass_g"].isna().sum())
+
+mass_data = penguins.dropna(subset=["body_mass_g"])
+mass_summary = (
+    mass_data.groupby("species")["body_mass_g"]
+    .agg(penguins="count", mean_mass_g="mean")
+    .round(1)
+)
+print(mass_summary)
+```
+
+The table reports how many penguins have a body mass measurement in each species and their mean body mass. Rows with missing body mass were excluded.
+
+```{python}
+#| label: fig-penguin-mass-python
+#| fig-cap: "Body mass measurements by penguin species."
+species = sorted(mass_data["species"].unique())
+values = [
+    mass_data.loc[mass_data["species"] == name, "body_mass_g"]
+    for name in species
+]
+
+fig, ax = plt.subplots()
+ax.boxplot(values, tick_labels=species)
+ax.set_xlabel("Species")
+ax.set_ylabel("Body mass (g)")
+plt.show()
+```
+
+The plot shows how body mass differs across species, as well as variation among penguins of the same species. Compare the table and plot with the R post: both analyses use the same measurements and exclude missing body mass values.

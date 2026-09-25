@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/penguin-body-mass-r/index.html",
+      "/posts/penguin-body-mass-python/index.html",
       "/posts/first-weeks/index.html"
     ]
   }

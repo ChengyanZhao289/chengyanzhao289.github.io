@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nChengyan Zhao\n\n\n\n\n\nNo matching items"
+    "text": "Penguin Body Mass by Species: R\n\n\n\n\n\n\n\n\nSep 24, 2026\n\n\nChengyan Zhao\n\n\n\n\n\n\n\n\n\n\n\n\nPenguin Body Mass by Species: Python\n\n\n\n\n\n\n\n\nSep 24, 2026\n\n\nChengyan Zhao\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 11, 2026\n\n\nChengyan Zhao\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,11 +14,25 @@
     "text": "My name is Yan. I’m from China and I immigrate to Canada when I was 15. I finished my bachelor of statistics and math at UofT right before I came to MDS. I’m hoping to gain more knowledge to strength my coding skills and to know more people that have the same interest in data science!"
   },
   {
+    "objectID": "posts/penguin-body-mass-r/index.html",
+    "href": "posts/penguin-body-mass-r/index.html",
+    "title": "Penguin Body Mass by Species: R",
+    "section": "",
+    "text": "Topic:\nHow does body mass vary among the three penguin species in the Palmer Penguins dataset? I will check missing values, calculate a summary for each species, and plot the measurements.\nData: Palmer Penguins, collected by Dr. Kristen Gorman and the Palmer Station Antarctica LTER Program. Licence: CC0.\n\nlibrary(palmerpenguins)\nlibrary(dplyr)\nlibrary(ggplot2)\n\npenguins |&gt; count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\nThe dataset contains three species. And beofre comparing body mass, I will check how many measurements are missing.\n\npenguins |&gt;\n  summarise(\n    total_rows = n(),\n    missing_body_mass = sum(is.na(body_mass_g))\n  )\n\n# A tibble: 1 × 2\n  total_rows missing_body_mass\n       &lt;int&gt;             &lt;int&gt;\n1        344                 2\n\nmass_summary &lt;- penguins |&gt;\n  filter(!is.na(body_mass_g)) |&gt;\n  group_by(species) |&gt;\n  summarise(\n    penguins = n(),\n    mean_mass_g = round(mean(body_mass_g), 1),\n    .groups = \"drop\"\n  )\n\nmass_summary\n\n# A tibble: 3 × 3\n  species   penguins mean_mass_g\n  &lt;fct&gt;        &lt;int&gt;       &lt;dbl&gt;\n1 Adelie         151       3701.\n2 Chinstrap       68       3733.\n3 Gentoo         123       5076 \n\n\nThe table compares the number of recorded body masses and their mean for each species. I excluded missing body mass values from the calculation.\n\nggplot(\n  penguins |&gt; filter(!is.na(body_mass_g)),\n  aes(x = species, y = body_mass_g, fill = species)\n) +\n  geom_boxplot() +\n  labs(x = \"Species\", y = \"Body mass (g)\") +\n  theme_minimal() +\n  guides(fill = \"none\")\n\n\n\n\n\n\n\nFigure 1: Body mass measurements by penguin species.\n\n\n\n\n\nThe plot shows both the differences between species and the variation within each species. The summary table identifies which species has the highest mean; the boxplots show that individual penguins also vary in mass."
+  },
+  {
     "objectID": "posts/first-weeks/index.html",
     "href": "posts/first-weeks/index.html",
     "title": "My first weeks in MDS",
     "section": "",
     "text": "Orientation day on campus.\n\n\n\nMy First Weeks in MDS\nMy first week in the MDS program have been exciting and busy. Orientation was a great opportunity to meet my classmates and learn more about the program. There was a lot of new information to take in, but I was excited to start this new chapter and get to know the people I will be studying with over the next year.\nThe first week of classes was definitely more intense than I expected. We started working with Python, R, Git, GitHub, and the command line very quickly. Coming from a Statistics background at the University of Toronto, I was familiar with R and statistical concepts, but some of the programming tools and workflows were new to me. I was especially surprised by how quickly we moved from learning concepts to actually using them in worksheets and labs.\nNow that I have made it through the first two weeks, almost? I am starting to feel more comfortable with the pace and the tools we use. There is still a lot to learn, and sometimes it can feel overwhelming, but I am enjoying the challenge. I am looking forward to improving my programming skills, learning more about data science, and seeing how much I will grow throughout the MDS program."
+  },
+  {
+    "objectID": "posts/penguin-body-mass-python/index.html",
+    "href": "posts/penguin-body-mass-python/index.html",
+    "title": "Penguin Body Mass by Species: Python",
+    "section": "",
+    "text": "How does body mass vary among the three penguin species in the Palmer Penguins dataset? I will repeat the R analysis in Python: check missing values, calculate species means, and make a plot.\nData: Palmer Penguins, collected by Dr. Kristen Gorman and the Palmer Station Antarctica LTER Program. Licence: CC0.\n\nfrom palmerpenguins import load_penguins\nimport matplotlib.pyplot as plt\n\npenguins = load_penguins()\nprint(penguins[\"species\"].value_counts())\n\nspecies\nAdelie       152\nGentoo       124\nChinstrap     68\nName: count, dtype: int64\n\n\nThe dataset contains three species. I check for missing body mass values before calculating the averages.\n\nprint(\"Total rows:\", len(penguins))\nprint(\"Missing body masses:\", penguins[\"body_mass_g\"].isna().sum())\n\nmass_data = penguins.dropna(subset=[\"body_mass_g\"])\nmass_summary = (\n    mass_data.groupby(\"species\")[\"body_mass_g\"]\n    .agg(penguins=\"count\", mean_mass_g=\"mean\")\n    .round(1)\n)\nprint(mass_summary)\n\nTotal rows: 344\nMissing body masses: 2\n           penguins  mean_mass_g\nspecies                         \nAdelie          151       3700.7\nChinstrap        68       3733.1\nGentoo          123       5076.0\n\n\nThe table reports how many penguins have a body mass measurement in each species and their mean body mass. Rows with missing body mass were excluded.\n\nspecies = sorted(mass_data[\"species\"].unique())\nvalues = [\n    mass_data.loc[mass_data[\"species\"] == name, \"body_mass_g\"]\n    for name in species\n]\n\nfig, ax = plt.subplots()\nax.boxplot(values, tick_labels=species)\nax.set_xlabel(\"Species\")\nax.set_ylabel(\"Body mass (g)\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Body mass measurements by penguin species.\n\n\n\n\n\nThe plot shows how body mass differs across species, as well as variation among penguins of the same species. Compare the table and plot with the R post: both analyses use the same measurements and exclude missing body mass values."
   },
   {
     "objectID": "about.html",
